@@ -1,0 +1,43 @@
+/* chat/static/css/custom.css */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #dee2e6;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-left {
+    left: 0;
+    padding-right: 3rem;
+}
+
+.timeline-right {
+    left: 50%;
+    padding-left: 3rem;
+}
+
+@media (max-width: 768px) {
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding: 0 !important;
+    }
+}

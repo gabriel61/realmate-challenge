@@ -1,0 +1,51 @@
+{% extends 'chat/base.html' %}
+
+{% block content %}
+    <div class="card shadow">
+        <div class="card-header bg-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Conversa {{ conversation.id }}</h4>
+            <span class="badge bg-{{ conversation.status|yesno:'success,danger' }}">
+                {{ conversation.status }}
+            </span>
+        </div>
+
+        <div class="card-body">
+            <div class="timeline">
+                {% for message in conversation.messages.all %}
+                    <div class="timeline-item {% if message.direction == 'SENT' %}timeline-right{% else %}timeline-left{% endif %}">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between">
+                                    <small class="text-muted">
+                                        {{ conversation.created_at|date:"d M Y, H:i" }}
+                                    </small>
+                                    <span class="badge bg-{% if message.direction == 'SENT' %}primary{% else %}success{% endif %}">
+                                        {{ message.direction }}
+                                    </span>
+                                </div>
+                                <p class="mt-2 mb-0">{{ message.content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<style>
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .timeline-item {
+        margin-bottom: 20px;
+    }
+    .timeline-left {
+        text-align: left;
+    }
+    .timeline-right {
+        text-align: right;
+    }
+</style>

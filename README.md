@@ -6,6 +6,21 @@
 ![Detalhes de uma Conversa](./screenshots/conversation-detail.png)
 *Visão detalhada de uma conversa com histórico de mensagens*
 
+## 🌐 Rotas Disponíveis
+
+### Frontend
+| Método | Rota                      | Descrição                           | Exemplo de Uso                          |
+|--------|---------------------------|-------------------------------------|------------------------------------------|
+| GET    | `/`                       | Lista todas as conversas            | `http://localhost:8000/`                 |
+| GET    | `/conversations/{id}/`    | Exibe detalhes de uma conversa      | `http://localhost:8000/conversations/6a41b347-.../` |
+
+### API
+| Método | Rota                              | Descrição                           | Exemplo de Uso                          |
+|--------|-----------------------------------|-------------------------------------|------------------------------------------|
+| POST   | `/webhook/`                       | Recebe eventos de webhook           | `http://localhost:8000/webhook/`         |
+| GET    | `/webhook/conversations/{id}/`    | Retorna dados JSON de uma conversa  | `http://localhost:8000/webhook/conversations/6a41b347-.../` |
+
+
 ## ✒️ Autor
 
 <br>

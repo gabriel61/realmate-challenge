@@ -1,4 +1,23 @@
-# realmate-challenge
+# Realmate Challenge 
+
+![Tela de Listagem de Conversas](./screenshots/conversations-list.png)
+*Interface web para visualização das conversas*
+
+![Detalhes de uma Conversa](./screenshots/conversation-detail.png)
+*Visão detalhada de uma conversa com histórico de mensagens*
+
+## ✒️ Autor
+
+<br>
+
+<a href="https://github.com/gabriel61">
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/gabriel61" width="100px;" alt="">
+</a>
+
+[![Linkedin Badge](https://img.shields.io/badge/-GabrielOliveira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/sogabris/)](https://www.linkedin.com/in/sogabris/)
+<br>
+sogabris@gmail.com
+<br>
 
 ## Introdução
 
